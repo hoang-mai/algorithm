@@ -1,3 +1,5 @@
+package solution.find.lhs;
+
 import java.util.*;
 
 /**
