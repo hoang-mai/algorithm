@@ -1,4 +1,4 @@
-package solution.possible.string.count;
+package solution.possible.string.count.I;
 
 /**
  * LeetCode Problem 3330: Find the Original Typed String I
@@ -9,7 +9,7 @@ package solution.possible.string.count;
  * @author Mai Anh Hoàng
  * @since 01/07/2025
  */
-public class SolutionPossibleStringCount {
+public class SolutionPossibleStringCountI {
 
     /**
      * Tính số lượng chuỗi có thể tạo được từ một chuỗi đã cho.
@@ -18,7 +18,7 @@ public class SolutionPossibleStringCount {
      * @param word Chuỗi đầu vào, có thể chứa các ký tự giống nhau liên tiếp.
      * @return Số lượng chuỗi có thể tạo được từ chuỗi đầu vào.
      */
-    public int possibleStringCount(String word) {
+    public int possibleStringCountI(String word) {
         int result = 0;
         char preCharacter = word.charAt(0);
         for (int i = 1; i < word.length(); i++) {
@@ -33,7 +33,7 @@ public class SolutionPossibleStringCount {
     }
 
     public static void main(String[] args) {
-        SolutionPossibleStringCount solution = new SolutionPossibleStringCount();
-        System.out.println(solution.possibleStringCount("aaaa"));
+        SolutionPossibleStringCountI solution = new SolutionPossibleStringCountI();
+        System.out.println(solution.possibleStringCountI("aaaa"));
     }
 }
