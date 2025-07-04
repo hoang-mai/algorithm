@@ -18,7 +18,7 @@ Lưu ý rằng ký tự 'z' có thể được thay đổi thành 'a' trong phé
 ## Định nghĩa hàm
 
 ```java
-public char kthCharacter(int k);
+public char kthCharacterI(int k);
 ```
 
 ## Phương pháp: Thuật toán Logarit + Cây nhị phân
@@ -46,7 +46,7 @@ Quan sát thấy rằng chuỗi có cấu trúc như một cây nhị phân hoà
 1. **Khởi tạo**: `count = 0` (số lần dịch chuyển), `modForK = k` (vị trí hiện tại)
 2. **Lặp**: Trong khi `modForK != 1`:
    - Nếu `modForK` là lũy thừa của 2: `count += log₂(modForK)`
-   - Ngược lại: giảm `modForK` về vị trí gần nhất ở nửa trái, tăng `count`
+   - Ngược lại: giảm `modForK` về vị trí tương ứng phía bên trái, tăng `count`
 3. **Trả về**: Ký tự `'a' + count % 26`
 
 ## Ví dụ

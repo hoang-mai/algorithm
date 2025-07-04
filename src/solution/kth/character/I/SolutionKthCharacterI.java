@@ -1,4 +1,4 @@
-package solution.kth.character;
+package solution.kth.character.I;
 
 /**
  * LeetCode Problem 3304: Find the K-th Character in String Game I
@@ -12,7 +12,7 @@ package solution.kth.character;
  * @author Mai Anh Hoàng
  * @since 04/07/2025
  */
-public class SolutionKthCharacter {
+public class SolutionKthCharacterI {
 
     /**
      * Tìm ký tự thứ k trong chuỗi được tạo ra từ việc mở rộng chuỗi ban đầu theo quy tắc.
@@ -23,7 +23,7 @@ public class SolutionKthCharacter {
      * @param k Số nguyên dương đại diện cho vị trí ký tự cần tìm trong chuỗi (1-indexed).
      * @return Ký tự thứ k trong chuỗi được tạo ra.
      */
-    public char kthCharacter(int k) {
+    public char kthCharacterI(int k) {
         int count = 0;          // Đếm số lần cần dịch chuyển ký tự từ 'a'
         int modForK = k;        // Vị trí hiện tại trong chuỗi
 
@@ -34,7 +34,7 @@ public class SolutionKthCharacter {
                 count += floorLogBase2(modForK) % 26;
                 break;
             }
-            // Giảm modForK về phần tử gần nhất trong nửa trái của cây
+            // Giảm modForK về phần tử tương ứng trong nửa trái của cây
             modForK = (int) (modForK - Math.pow(2, floorLogBase2(modForK)));
             count++;            // Tăng count vì ta đã dịch chuyển 1 bước
         }
@@ -58,11 +58,12 @@ public class SolutionKthCharacter {
      * @return true nếu x là lũy thừa của 2, false trong trường hợp ngược lại.
      */
     private boolean isLogBase2(int x) {
-        return Math.log(x) / Math.log(2) == Math.floor(Math.log(x) / Math.log(2));
+        double v = Math.log(x) / Math.log(2);
+        return v == Math.floor(v);
     }
 
     public static void main(String[] args) {
-        SolutionKthCharacter solution = new SolutionKthCharacter();
-        System.out.println(solution.kthCharacter(5));
+        SolutionKthCharacterI solution = new SolutionKthCharacterI();
+        System.out.println(solution.kthCharacterI(3));
     }
 }
