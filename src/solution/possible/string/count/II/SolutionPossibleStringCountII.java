@@ -11,7 +11,7 @@ import java.util.List;
  * You are given a string word, which represents the final output displayed on Alice's screen.
  * Return the total number of possible original strings that Alice might have intended to type, with the condition that there are at least k elements in the result.
  * @author Mai Anh Hoàng
- * @since 01/07/2025
+ * @since 02/07/2025
  */
 class SolutionPossibleStringCountII {
     private static final int MOD = 1000000007;
